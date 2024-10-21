@@ -198,9 +198,9 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, TRFFIC0_GREEN_Pin|TRFFIC1_RED_Pin|TRFFIC1_AMBER_Pin|TRFFIC1_GREEN_Pin
+  HAL_GPIO_WritePin(GPIOB, TRAFFIC0_GREEN_Pin|TRAFFIC1_RED_Pin|TRAFFIC1_AMBER_Pin|TRAFFIC1_GREEN_Pin
                           |LED7SEG_0_Pin|LED7SEG_1_Pin|LED7SEG_2_Pin|LED7SEG_3_Pin
-                          |TRFFIC0_RED_Pin|TRFFIC0_AMBER_Pin, GPIO_PIN_RESET);
+                          |TRAFFIC0_RED_Pin|TRAFFIC0_AMBER_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, LED7SEG_A_Pin|LED7SEG_B_Pin|LED7SEG_C_Pin|LED7SEG_D_Pin
@@ -212,12 +212,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : TRFFIC0_GREEN_Pin TRFFIC1_RED_Pin TRFFIC1_AMBER_Pin TRFFIC1_GREEN_Pin
+  /*Configure GPIO pins : TRAFFIC0_GREEN_Pin TRAFFIC1_RED_Pin TRAFFIC1_AMBER_Pin TRAFFIC1_GREEN_Pin
                            LED7SEG_0_Pin LED7SEG_1_Pin LED7SEG_2_Pin LED7SEG_3_Pin
-                           TRFFIC0_RED_Pin TRFFIC0_AMBER_Pin */
-  GPIO_InitStruct.Pin = TRFFIC0_GREEN_Pin|TRFFIC1_RED_Pin|TRFFIC1_AMBER_Pin|TRFFIC1_GREEN_Pin
+                           TRAFFIC0_RED_Pin TRAFFIC0_AMBER_Pin */
+  GPIO_InitStruct.Pin = TRAFFIC0_GREEN_Pin|TRAFFIC1_RED_Pin|TRAFFIC1_AMBER_Pin|TRAFFIC1_GREEN_Pin
                           |LED7SEG_0_Pin|LED7SEG_1_Pin|LED7SEG_2_Pin|LED7SEG_3_Pin
-                          |TRFFIC0_RED_Pin|TRFFIC0_AMBER_Pin;
+                          |TRAFFIC0_RED_Pin|TRAFFIC0_AMBER_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
